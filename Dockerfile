@@ -2,7 +2,15 @@ FROM debian:bullseye
 
 RUN apt-get update && apt-get install -y \
     gnupg2 \
+    gcc \
+    make \
+    gcc \
+    libssl-dev\
+    zlib1g-dev \
+    libspeexdsp-dev \
     wget \
+    git \
+    sngrep \
     curl \
     lsb-release \
     apt-transport-https \
