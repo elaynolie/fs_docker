@@ -21,7 +21,7 @@ RUN echo "machine freeswitch.signalwire.com login elaynolie password ${FS_TOKEN}
 RUN echo "deb [signed-by=/usr/share/keyrings/signalwire-freeswitch-repo.gpg] https://freeswitch.signalwire.com/repo/deb/debian-release/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/freeswitch.list && \
     echo "deb-src [signed-by=/usr/share/keyrings/signalwire-freeswitch-repo.gpg] https://freeswitch.signalwire.com/repo/deb/debian-release/ $(lsb_release -sc) main" >> /etc/apt/sources.list.d/freeswitch.list
 
-WORKDIR /usr/src
+WORKDIR /usr/local/src
 RUN git clone https://github.com/amigniter/mod_audio_stream.git && \
     cd mod_audio_stream && \
     bash ./build-mod-audio-stream.sh
